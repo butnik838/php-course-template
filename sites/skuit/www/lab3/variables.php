@@ -30,7 +30,7 @@ $grades = [4,5,4,5,5];
     <h2>1. Базовые переменные</h2>
     <p>Имя: <span class="variable"><?= $name ?></span></p>
     <p>Возраст: <span class="variable"><?= $age ?></span></p>
-    <p>Рост: <span class="variable"><?= $heilchtCm ?></span> см</p>
+    <p>Рост: <span class="variable"><?= $heightCm ?></span> см</p>
     <p>Студент: <span class="variable"><?= $isStudent ? 'да' : 'нет'?></span></p>
     <p>Оценки: <span class="variable"><?= implode(',',$grades) ?></span></p>
 </div>
@@ -54,8 +54,8 @@ $grades = [4,5,4,5,5];
     <p>Рост в дюймах: <span class="result"><?= round($heinghtInches, 2) ?></span></p>
     <div class="hint">// рост в см / 2.54  = <?= round($heinghtInches, 2) ?></div>
 
-    <p>Рост в метрах: <span class="result"><?= round($heinghtMeters, 2) ?></span></p>
-    <div class="hint">// рост в см / 100  = <?= round($heinghtMeters, 2) ?></div>
+    <p>Рост в метрах: <span class="result"><?= round($heightMeters, 2) ?></span></p>
+    <div class="hint">// рост в см / 100  = <?= round($heightMeters, 2) ?></div>
 
     <p>Средний балл: <span class="result"><?= round($averageGrade, 2) ?></span></p>
     <div class="hint">// array_sum($grades) / count($grades) = <?= round($averageGrade, 2) ?></div>
