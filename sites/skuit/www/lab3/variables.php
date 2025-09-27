@@ -155,5 +155,6 @@ $grades = [4,5,4,5,5];
     <h2>6. Случайное число для Эрика</h2>
     <?php
     $randomInt = rand(1, 4);
+    echo ($randomInt);
     ?>
 </div>
