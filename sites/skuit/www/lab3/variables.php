@@ -32,7 +32,7 @@ $grades = [4,5,4,5,5];
     <p>Возраст: <span class="variable"><?= $age ?></span></p>
     <p>Рост: <span class="variable"><?= $heightCm ?></span> см</p>
     <p>Студент: <span class="variable"><?= $isStudent ? 'да' : 'нет'?></span></p>
-    <p>Оценки: <span class="variable"><?= implode(',',$grades) ?></span></p>
+    <p>Оценки: <span class="variable"><?= implode('-',$grades) ?></span></p>
 </div>
 
 <div class="section">
@@ -66,8 +66,8 @@ $grades = [4,5,4,5,5];
     <?php
     $greeting = "Привет, " . $name . "!";
     $ageInfo = "Тебе $age лет";
-    $upperName = strtoupper($name);
-    $nameLenght = strlen($name);
+    $upperName = mb_strtoupper($name);
+    $nameLenght = mb_strlen($name);
     ?>
 
     <p>Приветствие: <span class="result"><?= $greeting ?></span></p>
