@@ -29,7 +29,12 @@ $partyEvents = [
 ];
 
 $delayDays = count($supplies);
+$randNum = rand(1, 3);
 
+shuffle($partyEvents);
+$days = array_slice($partyEvents, 0, $randNum);
+
+$nazgulDays = 5;
 
 ?>
 
@@ -52,4 +57,28 @@ $delayDays = count($supplies);
     <?foreach ($supplies as $value) {
         echo("- $value <br>");
     }?>
+</div>
+
+<div class='block'>
+    Случайные события:<br>
+    <?foreach ($days as $value) {
+        $randEvent1 = $party[array_rand($party)];
+        $event = str_replace("{hobbit}", $randEvent1, $value);
+        echo("- $event <br>");
+        $delayDays++;
+    }?>
+</div>
+
+<div class='block'>
+    Сколько дней добирались Хоббиты:<br>
+    <?php
+    if ($delayDays < $nazgulDays) {
+        echo " Хоббиты успели выйти в путь раньше назгулов!";
+    } elseif ($delayDays == $nazgulDays) {
+        echo " Хоббиты успели от назгулов в самый последний момент!";
+    } else {
+        $late = $delayDays - $nazgulDays;
+        echo " назгулы настигли хоббитов! Опоздали на $late дней!";
+    }
+    ?>
 </div>
